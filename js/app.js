@@ -1,7 +1,3 @@
-const redBtn = document.querySelector(".red");
-const greenBtn = document.querySelector(".green");
-const yelloBtn = document.querySelector(".yellow");
-const blueBtn = document.querySelector(".blue");
 const coloredBtn = document.querySelectorAll(".gameBtn");
 const startBtn = document.querySelector("#startBtn");
 const startArr = [];
@@ -9,6 +5,13 @@ const playerArr = [];
 const background = document.querySelector("body");
 const score = document.querySelector("h1");
 const scoreStatment = document.querySelector("h2");
+const loseAudio = new Audio("sounds/lose.mp3.mp3");
+const Audio1 = new Audio("sounds/sound1.mp3.mp3");
+const Audio2 = new Audio("sounds/sound2.mp3.mp3");
+const Audio3 = new Audio("sounds/sound3.mp3.mp3");
+const Audio4 = new Audio("sounds/sound4.mp3.mp3");
+const soundsArr = [Audio1, Audio2, Audio3, Audio4];
+let winner = true;
 let icounter = 0;
 let level = 0;
 
@@ -17,7 +20,6 @@ const insertNum = () => {
   startArr.push(num);
   return num;
 };
-
 const gameOver = () => {
   scoreStatment.innerHTML = "you lost";
   startArr.length = 0;
@@ -25,8 +27,11 @@ const gameOver = () => {
   level = 0;
   icounter = 0;
 };
-
 const trigger = (selected) => {
+  if (winner == true) {
+    let temporaryNum = eval(selected);
+    soundsArr[temporaryNum - 1].play();
+  }
   setTimeout(() => {
     document.getElementById(`${selected}`).classList.add("pressed");
   }, 0);
@@ -35,15 +40,23 @@ const trigger = (selected) => {
     document.getElementById(`${selected}`).classList.remove("pressed");
   }, 500);
 };
+const lost = () => {
+  setTimeout(() => {
+    document.querySelector("body").classList.add("lost");
+  }, 0);
 
+  setTimeout(() => {
+    document.querySelector("body").classList.remove("lost");
+  }, 500);
+};
 const next = () => {
   scoreStatment.innerHTML = "";
   score.innerHTML = `Your Score : ${level}`;
-  const randNum = insertNum();
+  insertNum();
   trigger(startArr[startArr.length - 1]);
 };
-
 startBtn.addEventListener("click", () => {
+  winner = true;
   gameOver();
   next();
 });
@@ -51,7 +64,6 @@ startBtn.addEventListener("click", () => {
 const checkMatch = (btn) => {
   switch (true) {
     case playerArr[icounter] == startArr[icounter]:
-      console.log("correct");
       icounter++;
 
       if (startArr.length == icounter) {
@@ -64,15 +76,17 @@ const checkMatch = (btn) => {
       }
       break;
     case !(playerArr[icounter] == startArr[icounter]):
-      console.log("lose");
+      loseAudio.play();
+      winner = false;
+      lost();
       gameOver();
+
       break;
 
     default:
       break;
   }
 };
-
 coloredBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
     playerArr.push(btn.id);
