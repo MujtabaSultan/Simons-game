@@ -8,6 +8,7 @@ const startArr = [];
 const playerArr = [];
 const background = document.querySelector("body");
 const score = document.querySelector("h1");
+const scoreStatment = document.querySelector("h2");
 let icounter = 0;
 let level = 0;
 
@@ -18,6 +19,7 @@ const insertNum = () => {
 };
 
 const gameOver = () => {
+  scoreStatment.innerHTML = "you lost";
   startArr.length = 0;
   playerArr.length = 0;
   level = 0;
@@ -35,7 +37,8 @@ const trigger = (selected) => {
 };
 
 const next = () => {
-  score.innerHTML = level;
+  scoreStatment.innerHTML = "";
+  score.innerHTML = `your score :${level}`;
   const randNum = insertNum();
   trigger(startArr[startArr.length - 1]);
 };
@@ -59,7 +62,7 @@ const checkMatch = (btn) => {
       break;
     case !(playerArr[icounter] == startArr[icounter]):
       console.log("lose");
-      //gameOver();
+      gameOver();
       break;
 
     default:

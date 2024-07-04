@@ -19,7 +19,7 @@ h1 {
   background: green;
 }
 .yellow {
-  background: yellow;
+  background: purple;
 }
 .blue {
   background: blue;
@@ -57,4 +57,7 @@ body {
   background: white;
   border: grey solid 3px;
   transition: 0.2s;
+}
+h2 {
+  text-align: center;
 }
