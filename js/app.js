@@ -43,7 +43,10 @@ const next = () => {
   trigger(startArr[startArr.length - 1]);
 };
 
-startBtn.addEventListener("click", next);
+startBtn.addEventListener("click", () => {
+  gameOver();
+  next();
+});
 
 const checkMatch = (btn) => {
   switch (true) {
