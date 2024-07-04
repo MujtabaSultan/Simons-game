@@ -38,7 +38,7 @@ const trigger = (selected) => {
 
 const next = () => {
   scoreStatment.innerHTML = "";
-  score.innerHTML = `your score :${level}`;
+  score.innerHTML = `Your Score : ${level}`;
   const randNum = insertNum();
   trigger(startArr[startArr.length - 1]);
 };
