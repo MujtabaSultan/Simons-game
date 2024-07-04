@@ -56,4 +56,5 @@ body {
 .pressed {
   background: white;
   border: grey solid 3px;
+  transition: 0.2s;
 }
