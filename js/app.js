@@ -1,5 +1,6 @@
 const coloredBtn = document.querySelectorAll(".gameBtn");
 const startBtn = document.querySelector("#startBtn");
+const mode = document.querySelector(".mode");
 const startArr = [];
 const playerArr = [];
 const background = document.querySelector("body");
@@ -93,4 +94,11 @@ coloredBtn.forEach((btn) => {
     trigger(btn.id);
     checkMatch(btn.id);
   });
+});
+
+mode.addEventListener("click", () => {
+  console.log(background.classList);
+  background.classList.toggle("light");
+  score.classList.toggle("lightModeTxt");
+  scoreStatment.classList.toggle("lightModeTxt");
 });
