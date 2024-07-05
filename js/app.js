@@ -1,6 +1,7 @@
 const coloredBtn = document.querySelectorAll(".gameBtn");
-const startBtn = document.querySelector("#startBtn");
+const startBtn = document.querySelector(".startBtn");
 const mode = document.querySelector(".mode");
+const topScoreTxt = document.querySelector(".topScore");
 const startArr = [];
 const playerArr = [];
 const background = document.querySelector("body");
@@ -15,6 +16,7 @@ const soundsArr = [Audio1, Audio2, Audio3, Audio4];
 let winner = true;
 let icounter = 0;
 let level = 0;
+let topScore = 0;
 
 const insertNum = () => {
   let num = Math.floor(Math.random() * 4 + 1);
@@ -53,6 +55,10 @@ const lost = () => {
 const next = () => {
   scoreStatment.innerHTML = "";
   score.innerHTML = `Your Score : ${level}`;
+  if (level > topScore) {
+    topScore = level;
+    topScoreTxt.innerHTML = `Top Score : ${topScore}`;
+  }
   insertNum();
   trigger(startArr[startArr.length - 1]);
 };
@@ -95,10 +101,10 @@ coloredBtn.forEach((btn) => {
     checkMatch(btn.id);
   });
 });
-
 mode.addEventListener("click", () => {
-  console.log(background.classList);
   background.classList.toggle("light");
   score.classList.toggle("lightModeTxt");
   scoreStatment.classList.toggle("lightModeTxt");
+  startBtn.classList.toggle("lightModeTxt");
+  topScoreTxt.classList.toggle("lightModeTxt");
 });

@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
-
+* {
+  margin: 0;
+  padding: 0;
+}
 h1 {
   text-align: center;
   font-family: "Play", sans-serif;
@@ -37,12 +40,12 @@ h1 {
 }
 
 .reset {
-  margin-top: 30px;
+  margin-top: 25px;
   justify-content: center;
   display: flex;
 }
 
-#startBtn {
+.startBtn {
   height: 40px;
   background-color: #fca311;
   color: white;
@@ -65,7 +68,11 @@ h2 {
   text-align: center;
   font-family: "Play", sans-serif;
 }
-
+.mode {
+  background-color: #3d405b;
+  height: 30px;
+  width: 30px;
+}
 .light {
   background-color: beige;
 }
@@ -76,4 +83,13 @@ h2 {
 .lost {
   background-color: red;
   transition: 0.4s;
+}
+.topScore {
+  font-family: "Play", sans-serif;
+  text-align: right;
+  margin-top: 0px;
+}
+.darkness {
+  display: flex;
+  justify-content: space-between;
 }
