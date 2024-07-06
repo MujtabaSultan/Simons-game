@@ -93,3 +93,7 @@ h2 {
   display: flex;
   justify-content: space-between;
 }
+
+.lightBtn {
+  background-color: #ffddd2;
+}

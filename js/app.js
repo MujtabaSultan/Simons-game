@@ -87,9 +87,7 @@ const checkMatch = (btn) => {
       winner = false;
       lost();
       gameOver();
-
       break;
-
     default:
       break;
   }
@@ -107,4 +105,5 @@ mode.addEventListener("click", () => {
   scoreStatment.classList.toggle("lightModeTxt");
   startBtn.classList.toggle("lightModeTxt");
   topScoreTxt.classList.toggle("lightModeTxt");
+  mode.classList.toggle("lightBtn");
 });
