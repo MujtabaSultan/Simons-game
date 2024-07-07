@@ -13,6 +13,7 @@ const Audio2 = new Audio("sounds/sound2.mp3.mp3");
 const Audio3 = new Audio("sounds/sound3.mp3.mp3");
 const Audio4 = new Audio("sounds/sound4.mp3.mp3");
 const soundsArr = [Audio1, Audio2, Audio3, Audio4];
+topScoreTxt.innerHTML = `Top Score : ${localStorage.getItem("top")}`;
 let winner = true;
 let icounter = 0;
 let level = 0;
@@ -55,9 +56,11 @@ const lost = () => {
 const next = () => {
   scoreStatment.innerHTML = "";
   score.innerHTML = `Your Score : ${level}`;
-  if (level > topScore) {
+
+  if (level > localStorage.getItem("top")) {
     topScore = level;
-    topScoreTxt.innerHTML = `Top Score : ${topScore}`;
+    localStorage.setItem("top", topScore);
+    topScoreTxt.innerHTML = `Top Score : ${localStorage.getItem("top")}`;
   }
   insertNum();
   trigger(startArr[startArr.length - 1]);
