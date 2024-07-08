@@ -13,11 +13,12 @@ const Audio2 = new Audio("sounds/sound2.mp3.mp3");
 const Audio3 = new Audio("sounds/sound3.mp3.mp3");
 const Audio4 = new Audio("sounds/sound4.mp3.mp3");
 const soundsArr = [Audio1, Audio2, Audio3, Audio4];
-topScoreTxt.innerHTML = `Top Score : ${localStorage.getItem("top")}`;
 let winner = true;
 let icounter = 0;
 let level = 0;
 let topScore = 0;
+
+topScoreTxt.innerHTML = `Top Score : ${localStorage.getItem("top")}`;
 
 const insertNum = () => {
   let num = Math.floor(Math.random() * 4 + 1);

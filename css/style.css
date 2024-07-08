@@ -20,15 +20,19 @@ h1 {
 }
 .red {
   background: red;
+  transition: 0.2s;
 }
 .green {
   background: green;
+  transition: 0.2s;
 }
 .purple {
   background: purple;
+  transition: 0.2s;
 }
 .blue {
   background: blue;
+  transition: 0.2s;
 }
 
 .gameBtn {
@@ -46,16 +50,18 @@ h1 {
 }
 
 .startBtn {
-  height: 40px;
+  height: 45px;
+  padding: 3px;
   background-color: #fca311;
   color: white;
   border-radius: 15px;
+  font-family: "Play", sans-serif;
   font-size: 20px;
 }
 
 body {
   background-color: #03071e;
-
+  transition: 0.7s;
   color: white;
 }
 
@@ -75,6 +81,7 @@ h2 {
 }
 .light {
   background-color: beige;
+  transition: 0.7s;
 }
 .lightModeTxt {
   color: black;
