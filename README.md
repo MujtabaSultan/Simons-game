@@ -7,3 +7,7 @@ The simon's game is a basic understandle game , the player needs to press start 
 ## game image:
 
 ![the game](<./Screenshot%20(121).png>)
+
+## the game link :
+
+[Simons game](https://mujtabasultan.github.io/Simons-game/)
