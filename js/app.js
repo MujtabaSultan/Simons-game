@@ -16,7 +16,6 @@ const Audio2 = new Audio("sounds/sound2.mp3.mp3");
 const Audio3 = new Audio("sounds/sound3.mp3.mp3");
 const Audio4 = new Audio("sounds/sound4.mp3.mp3");
 const soundsArr = [Audio1, Audio2, Audio3, Audio4];
-
 /*---------- Variables (state) ---------*/
 let winner = false;
 let icounter = 0;
@@ -26,7 +25,6 @@ let clcikable = true;
 if (localStorage.getItem("top") !== null) {
   topScoreTxt.innerHTML = `Top Score : ${localStorage.getItem("top")}`;
 }
-
 /*-------------- Functions -------------*/
 const insertNum = () => {
   let num = Math.floor(Math.random() * 4 + 1);
@@ -46,20 +44,19 @@ const trigger = (selected) => {
     let temporaryNum = eval(selected);
     soundsArr[temporaryNum - 1].play();
   }
-  setTimeout(() => {
-    document.getElementById(`${selected}`).classList.add("pressed");
-    clcikable = false;
-  }, 0);
+  document.getElementById(`${selected}`).classList.add("pressed");
+  clcikable = false;
 
   setTimeout(() => {
     document.getElementById(`${selected}`).classList.remove("pressed");
-    clcikable = true;
   }, 500);
+
+  setTimeout(() => {
+    clcikable = true;
+  }, 1060);
 };
 const lost = () => {
-  setTimeout(() => {
-    document.querySelector("body").classList.add("lost");
-  }, 0);
+  document.querySelector("body").classList.add("lost");
 
   setTimeout(() => {
     document.querySelector("body").classList.remove("lost");
@@ -68,7 +65,6 @@ const lost = () => {
 const next = () => {
   scoreStatment.innerHTML = "";
   score.innerHTML = `Your Score : ${level}`;
-
   if (level > localStorage.getItem("top")) {
     topScore = level;
     localStorage.setItem("top", topScore);
@@ -82,8 +78,7 @@ const checkMatch = (btn) => {
   switch (true) {
     case playerArr[icounter] == startArr[icounter]:
       icounter++;
-
-      if (startArr.length == icounter) {
+      if (startArr.length == playerArr.length && winner == true) {
         level++;
         icounter = 0;
         playerArr.length = 0;
