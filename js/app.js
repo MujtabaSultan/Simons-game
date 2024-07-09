@@ -6,6 +6,7 @@ const topScoreTxt = document.querySelector(".topScore");
 const background = document.querySelector("body");
 const score = document.querySelector("h1");
 const scoreStatment = document.querySelector("h2");
+const instruction = document.querySelector(".instructions");
 /*-------------- Constants -------------*/
 const startArr = [];
 const playerArr = [];
@@ -15,6 +16,7 @@ const Audio2 = new Audio("sounds/sound2.mp3.mp3");
 const Audio3 = new Audio("sounds/sound3.mp3.mp3");
 const Audio4 = new Audio("sounds/sound4.mp3.mp3");
 const soundsArr = [Audio1, Audio2, Audio3, Audio4];
+
 /*---------- Variables (state) ---------*/
 let winner = false;
 let icounter = 0;
@@ -124,4 +126,5 @@ mode.addEventListener("click", () => {
   startBtn.classList.toggle("lightModeTxt");
   topScoreTxt.classList.toggle("lightModeTxt");
   mode.classList.toggle("lightBtn");
+  instruction.classList.toggle("lightModeTxt");
 });
