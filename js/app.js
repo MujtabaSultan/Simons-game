@@ -21,13 +21,17 @@ let icounter = 0;
 let level = 0;
 let topScore = 0;
 let clcikable = true;
-topScoreTxt.innerHTML = `Top Score : ${localStorage.getItem("top")}`;
+if (localStorage.getItem("top") !== null) {
+  topScoreTxt.innerHTML = `Top Score : ${localStorage.getItem("top")}`;
+}
+
 /*-------------- Functions -------------*/
 const insertNum = () => {
   let num = Math.floor(Math.random() * 4 + 1);
   startArr.push(num);
   return num;
 };
+const topWin = () => {};
 const gameOver = () => {
   scoreStatment.innerHTML = "You lost , start game";
   startArr.length = 0;
