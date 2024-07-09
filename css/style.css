@@ -7,6 +7,17 @@ h1 {
   text-align: center;
   font-family: "Play", sans-serif;
 }
+.bigBody {
+  display: flex;
+  flex-wrap: wrap;
+}
+.instructions {
+  display: flex;
+  margin-top: 220px;
+  padding-left: 20px;
+  width: 26%;
+  font-family: "Play", sans-serif;
+}
 
 .container {
   display: flex;
@@ -16,7 +27,7 @@ h1 {
   height: 500px;
   width: 700px;
   text-align: center;
-  margin: 0 auto;
+  margin: 0;
 }
 .red {
   background: red;
