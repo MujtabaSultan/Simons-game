@@ -6,7 +6,7 @@ The simon's game is a basic understandle game , the player needs to press start 
 
 ## game image:
 
-![the game](<./Screenshot%20(121).png>)
+![the game](<./Screenshot (123).png>)
 
 ## the game link :
 
