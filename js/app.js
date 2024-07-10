@@ -17,6 +17,7 @@ const Audio3 = new Audio("sounds/sound3.mp3.mp3");
 const Audio4 = new Audio("sounds/sound4.mp3.mp3");
 const soundsArr = [Audio1, Audio2, Audio3, Audio4];
 /*---------- Variables (state) ---------*/
+let goNext = true;
 let winner = false;
 let icounter = 0;
 let level = 0;
@@ -53,7 +54,7 @@ const trigger = (selected) => {
 
   setTimeout(() => {
     clcikable = true;
-  }, 1500);
+  }, 1100);
 };
 const lost = () => {
   document.querySelector("body").classList.add("lost");
@@ -79,11 +80,13 @@ const checkMatch = (btn) => {
     case playerArr[icounter] == startArr[icounter]:
       icounter++;
       if (startArr.length == playerArr.length && winner == true) {
+        goNext = false;
         level++;
         icounter = 0;
         playerArr.length = 0;
         setTimeout(() => {
           if (winner == true) {
+            goNext = true;
             next();
           }
         }, 1000);
@@ -109,7 +112,7 @@ startBtn.addEventListener("click", () => {
 });
 coloredBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
-    if (clcikable == true && startArr.length !== 0) {
+    if (clcikable == true && startArr.length !== 0 && goNext == true) {
       playerArr.push(btn.id);
       checkMatch(btn.id);
       trigger(btn.id);
