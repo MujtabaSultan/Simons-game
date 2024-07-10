@@ -6,11 +6,11 @@ The simon's game is a basic understandle game , the player needs to press start 
 
 ## tech side
 
-basic js is used for dom manipulation of the page , css is used to style font on the page and colors and to make touching the buttons more interactive , html is where the elemts of the game were created
+basic js is used for dom manipulation of the page , css is used to style font on the page and colors and to make touching the buttons more interactive with a delay between the clicks to prevent player from rapid clicking , html is where the elements of the game were created , such as the buttons .
 
 ## the next steps
 
-added the localStorage to store the topScore for the player on the console , also implemented a light mode change button .
+added the localStorage to store the topScore for the player on the console , also implemented a light mode change button , used the media query to scale the game for phones and smaller screens.
 
 ## used sources:
 
