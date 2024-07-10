@@ -12,7 +12,10 @@ just press the link below to play the game
 
 ## tech side
 
-basic js is used for dom manipulation of the page , css is used to style font on the page and colors and to make touching the buttons more interactive with a delay between the clicks to prevent player from rapid clicking , html is where the elements of the game were created , such as the buttons .
+- html is where the elements of the game were created , such as the buttons .
+- css is used to style font on the page and colors and to make touching the buttons more interactive
+- basic js is used for dom manipulation of the page
+- a delay between the clicks to prevent player from rapid clicking
 
 ## the next steps
 
