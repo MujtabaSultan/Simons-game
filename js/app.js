@@ -53,7 +53,7 @@ const trigger = (selected) => {
 
   setTimeout(() => {
     clcikable = true;
-  }, 1060);
+  }, 1500);
 };
 const lost = () => {
   document.querySelector("body").classList.add("lost");
@@ -83,7 +83,9 @@ const checkMatch = (btn) => {
         icounter = 0;
         playerArr.length = 0;
         setTimeout(() => {
-          next();
+          if (winner == true) {
+            next();
+          }
         }, 1000);
       }
       break;
