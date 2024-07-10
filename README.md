@@ -31,12 +31,6 @@ just press the link below to play the game
 - [x] adding a toggle on the instructions to hide them and display them.
 - [ ] making more difficulty options
 
-## credits:
-
-i refered to the mdn docs for multiple things such as the localStorage and the setTimeOut , also refered to w3schools for media query adjustments. , used the cheat sheet for the github md.
-
-used sounds from this site [pixaby](https://pixabay.com/sound-effects/search/simon-game/)
-
 ## game images:
 
 ![the game](<./pictures/Screenshot%20(127).png>)
@@ -48,3 +42,9 @@ used sounds from this site [pixaby](https://pixabay.com/sound-effects/search/sim
 ## game with light mode on :
 
 ![the game](<./pictures/Screenshot%20(129).png>)
+
+## credits:
+
+i refered to the mdn docs for multiple things such as the localStorage and the setTimeOut , also refered to w3schools for media query adjustments. , used the cheat sheet for the github md.
+
+used sounds from this site [pixaby](https://pixabay.com/sound-effects/search/simon-game/)
