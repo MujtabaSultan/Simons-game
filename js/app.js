@@ -48,15 +48,13 @@ const trigger = (selected) => {
     soundsArr[temporaryNum - 1].play();
   }
   document.getElementById(`${selected}`).classList.add("pressed");
-  clcikable = false;
 
   setTimeout(() => {
     document.getElementById(`${selected}`).classList.remove("pressed");
-  }, 500);
-
-  setTimeout(() => {
     clcikable = true;
-  }, 1100);
+  }, 400);
+
+  setTimeout(() => {}, 1100);
 };
 const lost = () => {
   document.querySelector("body").classList.add("lost");
@@ -115,6 +113,7 @@ startBtn.addEventListener("click", () => {
 coloredBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
     if (clcikable == true && startArr.length !== 0 && goNext == true) {
+      clcikable = false;
       playerArr.push(btn.id);
       checkMatch(btn.id);
       trigger(btn.id);
