@@ -126,7 +126,7 @@ h2 {
     font-family: "Play", sans-serif;
     width: 100%;
     margin-top: 0;
-    font-size: 8px;
+    font-size: 4rm;
   }
 
   .container {
@@ -138,9 +138,19 @@ h2 {
   .gameBtn {
     width: 35%;
     height: 35%;
-
     margin: 0px 10px 0px 10px;
     border: 15px solid rgba(22, 19, 19, 0.356);
     border-radius: 20px;
+  }
+  .startBtn {
+    height: 30px;
+    font-size: 15px;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 500px) {
+  .instructions {
+    font-size: 10px;
   }
 }
