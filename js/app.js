@@ -53,8 +53,6 @@ const trigger = (selected) => {
     document.getElementById(`${selected}`).classList.remove("pressed");
     clcikable = true;
   }, 400);
-
-  setTimeout(() => {}, 1100);
 };
 const lost = () => {
   document.querySelector("body").classList.add("lost");
