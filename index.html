@@ -11,13 +11,17 @@
   <body>
     <div class="darkness">
       <p class="topScore">Top Score : 0</p>
-      <button class="mode">🔆</button>
+
+      <div class="right">
+        <button class="hide">Instructions</button>
+        <button class="mode">🔆</button>
+      </div>
     </div>
     <h2 class="message">press Start game</h2>
     <h1 id="score">Your Score : 0</h1>
     <div class="bigBody">
       <div class="instructions">
-        <p>
+        <!-- <p>
           Press "Start Game" to begin. Watch for the flashing colored button and
           press it. Each level adds another button to the sequence, which must
           be repeated in order. A delay between button presses prevents quick
@@ -25,7 +29,26 @@
           you press the wrong button, you lose and must press "Start Game" to
           replay with a fresh score of 0 and a new random sequence. The top
           score remains.
-        </p>
+        </p> -->
+        <ol class="myList">
+          <li>
+            Press "Start Game" to begin. Watch for the flashing colored button
+            and press it.
+          </li>
+          <li>
+            Each level adds another button to the sequence, which must be
+            repeated in order.
+          </li>
+          <li>
+            A delay between button presses prevents quick pressing and
+            confusion.
+          </li>
+          <li>The top score is displayed in the top left.</li>
+          <li>
+            If you press the wrong button, you lose and must press "Start Game"
+            to replay with a fresh score of 0 and a new random sequence.
+          </li>
+        </ol>
       </div>
       <div class="container">
         <button class="gameBtn red" id="1"></button>

@@ -12,12 +12,31 @@ h1 {
   flex-wrap: wrap;
 }
 .instructions {
+  font-size: 15px;
   display: flex;
-  margin-top: 190px;
-  width: 33%;
+  margin-top: 40px;
+  margin-left: 20px;
+  width: 32.3%;
   font-family: "Play", sans-serif;
 }
 
+li {
+  margin: 30px;
+}
+.hide {
+  background-color: #3d405b;
+  font-family: "Play", sans-serif;
+  color: white;
+  height: 30px;
+  width: 90px;
+  font-size: 15px;
+  margin-right: 2px;
+}
+.right {
+  width: 150px;
+  display: flex;
+  justify-content: right;
+}
 .container {
   display: flex;
   justify-content: center;
@@ -113,6 +132,9 @@ h2 {
 
 .lightBtn {
   background-color: #ffddd2;
+}
+.hider {
+  display: none;
 }
 
 @media (max-width: 1455px) {

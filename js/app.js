@@ -7,6 +7,8 @@ const background = document.querySelector("body");
 const score = document.querySelector("h1");
 const scoreStatment = document.querySelector("h2");
 const instruction = document.querySelector(".instructions");
+const hiden = document.querySelector(".hide");
+const myList = document.querySelector("ol");
 /*-------------- Constants -------------*/
 const startArr = [];
 const playerArr = [];
@@ -127,4 +129,9 @@ mode.addEventListener("click", () => {
   topScoreTxt.classList.toggle("lightModeTxt");
   mode.classList.toggle("lightBtn");
   instruction.classList.toggle("lightModeTxt");
+  hiden.classList.toggle("lightBtn");
+  hiden.classList.toggle("lightModeTxt");
+});
+hiden.addEventListener("click", () => {
+  myList.classList.toggle("hider");
 });
