@@ -20,7 +20,7 @@ basic js is used for dom manipulation of the page , css is used to style font on
 - [x] implementing a light mode change button.
 - [x] using the media query to scale the game for phones and smaller screens.
 - [x] adding a toggle on the instructions to hide them and display them.
-- [] making more difficulty options
+- [ ] making more difficulty options
 
 ## credits:
 
